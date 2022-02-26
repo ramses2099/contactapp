@@ -3,12 +3,21 @@ import ReactDOM from "react-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "react-toastify/dist/ReactToastify.css";
-import { BrowserRouter } from "react-router-dom";
-import App from "./App";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./Layout";
+import Home from "./components/Home";
+import AddContact from "./components/AddContact";
 
 ReactDOM.render(
   <BrowserRouter>
-    <App />
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="/contact" element={<AddContact />} />
+        <Route path="/about" element={<div>About</div>} />
+        <Route path="*" element={<div>404 - Pages not found</div>} />
+      </Route>
+    </Routes>
   </BrowserRouter>,
   document.getElementById("root")
 );
