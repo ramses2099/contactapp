@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const AddContact = () => {
   return (
@@ -14,7 +15,21 @@ const AddContact = () => {
                     <input
                       type="text"
                       className="form-control"
-                      placeholder="Name"
+                      placeholder="id"
+                    />
+                  </div>
+                  <div className="form-group py-2">
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="First Name"
+                    />
+                  </div>
+                  <div className="form-group py-2">
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="Last Name"
                     />
                   </div>
                   <div className="form-group py-2">
@@ -28,17 +43,29 @@ const AddContact = () => {
                     <input
                       type="text"
                       className="form-control"
-                      placeholder="Phone Number"
+                      placeholder="Gender"
+                    />
+                  </div>
+                  <div className="form-group py-2">
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="Ip Address"
                     />
                   </div>
                 </div>
               </div>
               <div className="row">
                 <div className="col-4"></div>
-                <div className="col-4">
+                <div className="col-2">
                   <button className="btn btn-primary">
                     <i className="bi bi-person-rolodex"></i> Add Contact
                   </button>
+                </div>
+                <div className="col-2">
+                  <Link to="/" className="btn btn-danger">
+                    <i className="bi bi-person-rolodex"></i> Cancel
+                  </Link>
                 </div>
                 <div className="col-4"></div>
               </div>

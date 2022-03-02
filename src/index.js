@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./Layout";
 import Home from "./components/Home";
 import AddContact from "./components/AddContact";
+import EditContact from "./components/EditContact";
 
 ReactDOM.render(
   <BrowserRouter>
@@ -14,6 +15,7 @@ ReactDOM.render(
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="/contact" element={<AddContact />} />
+        <Route path="/contact/:id" element={<EditContact />} />
         <Route path="/about" element={<div>About</div>} />
         <Route path="*" element={<div>404 - Pages not found</div>} />
       </Route>
